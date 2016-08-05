@@ -26,7 +26,7 @@
 		}
 	});
 
-	var ColumnTemplate = Handlebars.compile('<p>{{ name }}</p><ul></ul><button data-new-card="">Create new card</button>');
+	var ColumnTemplate = Handlebars.compile($('script[data-template-name="column"]').html().trim());
 	
 	var Column = Backbone.View.extend({
 		
@@ -50,7 +50,7 @@
 
 		newCard: function() {
 			this.cards.add({
-				name: prompt('Type card name')
+				name: prompt('Type card name') 
 			});
 		},
 
