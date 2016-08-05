@@ -1,0 +1,33 @@
+body{
+	background: url('img/bg.png'); 	
+}
+
+ul {
+	padding: 0;
+}
+
+#board{
+	width: 100%;
+	display: block;
+}
+
+.columns {
+	width: 300px;
+	display: inline-block;
+	background: #cccccc;
+	vertical-align: top;
+	margin: 0 10px 0 0;
+}
+
+.columns:nth-child(even) {
+	background: #a0a0a0;
+}
+
+.cards {
+	width: 100%;
+	background: #ffffff;
+	display: block;
+	border: 1px dotted #313131;
+	margin: 10px 0;
+	padding: 10px 0;
+}
