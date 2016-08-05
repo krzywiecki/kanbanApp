@@ -9,7 +9,7 @@
 		},
 
 		events: {
-    		'click #new-column' : 'newColumn'
+    		'click [data-new-column]' : 'newColumn'
 		},
 
 		newColumn: function() {
@@ -26,7 +26,7 @@
 		}
 	});
 
-	var ColumnTemplate = Handlebars.compile('<p>{{ name }}</p><ul></ul><button class="new-card">Create new card</button>');
+	var ColumnTemplate = Handlebars.compile('<p>{{ name }}</p><ul></ul><button data-new-card="">Create new card</button>');
 	
 	var Column = Backbone.View.extend({
 		
@@ -35,7 +35,7 @@
 		className: 'columns',
 
 		events: {
-			'click button.new-card': 'newCard'
+			'click button[data-new-card]': 'newCard'
 		},
 
 		initialize: function(options) {
@@ -85,7 +85,7 @@
 	});
 
 	new Board({
-		el: $('#board')
+		el: $('[data-board]')
 	});
 
 })(jQuery);
